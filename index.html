@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form de Pago</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .card {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 25px;
+    }
+    .payment-icons i {
+      font-size: 2rem;
+      margin-right: 15px;
+      color: #444;
+    }
+    .payment-icons i:hover {
+      color: #007bff;
+      transform: scale(1.1);
+      transition: 0.2s;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card shadow">
+  <h3 class="text-center mb-4">Form de Pago</h3>
+
+  <div class="mb-4 text-center">
+    <p class="mb-2 fw-semibold">Nosotros aceptamos:</p>
+    <div class="d-flex justify-content-center payment-icons">
+      <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+      <i class="fab fa-cc-paypal" title="PayPal"></i>
+      <i class="fab fa-cc-visa" title="Visa"></i>
+      <i class="fab fa-cc-amex" title="American Express"></i>
+    </div>
+  </div>
+
+  <form>
+    <div class="mb-3">
+      <label for="nombreTitular" class="form-label">Nombre del Titular</label>
+      <input type="text" class="form-control" id="nombreTitular" placeholder="Nombre que aparece en la tarjeta" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="cantidad" class="form-label">Cantidad a Pagar (MXN)</label>
+      <input type="number" class="form-control" id="cantidad" placeholder="Ej. 500" min="1" step="0.01" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="numeroTarjeta" class="form-label">Número de Tarjeta</label>
+      <input type="text" class="form-control" id="numeroTarjeta" placeholder="1234 5678 9012 3456" required>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="fechaExpiracion" class="form-label">Fecha de Expiración</label>
+        <input type="text" class="form-control" id="fechaExpiracion" placeholder="MM/AA" required>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="cvv" class="form-label">CVV</label>
+        <input type="text" class="form-control" id="cvv" placeholder="123" required>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="correo" class="form-label">Correo Electrónico</label>
+      <input type="email" class="form-control" id="correo" placeholder="ejemplo@correo.com" required>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="ciudad" class="form-label">Ciudad</label>
+        <input type="text" class="form-control" id="ciudad" placeholder="Tu ciudad" required>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="estado" class="form-label">Estado</label>
+        <input type="text" class="form-control" id="estado" placeholder="Tu estado" required>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="codigoPostal" class="form-label">Código Postal</label>
+        <input type="text" class="form-control" id="codigoPostal" placeholder="12345" required>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="mensaje" class="form-label">Mensaje Adicional</label>
+      <textarea class="form-control" id="mensaje" rows="3" placeholder="¿Algo que quiera agregar?"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success w-100">Pagar Ahora</button>
+  </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
